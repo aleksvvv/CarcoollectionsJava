@@ -6,9 +6,7 @@ import java.util.Iterator;
 
 public class CarHashSet implements CarSet {
 
-    private static final int INITIAL_CAPACITY = 16;
-    private int size = 0;
-    private Entry[] array = new Entry[INITIAL_CAPACITY];
+
 
     @Override
     public boolean add(Car car) {
