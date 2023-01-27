@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<ImageView
+    android:id="@+id/big_poster"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:src="@drawable/t2043"
+    android:paddingBottom="8dp"
+    android:adjustViewBounds="true"
+   app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidLineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        app:layout_constraintGuide_begin="16dp"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidLineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        app:layout_constraintGuide_end="16dp"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/guidLineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/big_poster"
+        app:layout_constraintEnd_toStartOf="@+id/banner"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constrainedWidth="true"
+
+        android:text="Blade Runner 2043 " />
+    <ImageView
+        android:id="@+id/banner"
+        android:src="@drawable/banner"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/guidLineRight"
+        app:layout_constraintTop_toBottomOf="@+id/big_poster"
+        app:layout_constraintHorizontal_bias="1"
+        android:adjustViewBounds="true"
+        />
+
+    <TextView
+        android:id="@+id/director_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guidLineLeft"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintHorizontal_bias="0"
+
+        android:text="Режиссер: " />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Фамилия "
+        app:layout_constraintBaseline_toBaselineOf="@+id/director_label"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/banner"
+        app:layout_constraintStart_toEndOf="@id/director_label" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="director_label,label,banner,title"/>
+    <TextView
+        android:id="@+id/description"
+        app:layout_constraintTop_toBottomOf="@id/barrier"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/guidLineLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidLineRight"
+        android:text="В недалеком будущем мир населен людьми и репликантами, созданными выполнять самую тяжелую работу.
+        \nРабота офицера полиции Кей — держать репликантов под контролем в условиях нарастающего напряжения. Он случайно становится обладателем секретной информации, которая ставит под угрозу существование всего человечества.
+        \nЖелая найти ключ к разгадке, Кей решает разыскать Рика Декарда — бывшего офицера специального подразделения полиции Лос-Анджелеса, который бесследно исчез много лет назад. "
+        />
+    <TextView
+        android:id="@+id/actors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guidLineLeft"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        android:layout_margin="8dp"
+        android:textStyle="bold"
+        android:text="ACTORS"
+        android:textSize="20dp"
+        />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guidLineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/actors"
+        android:text="yy"/>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guidLineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/actors"
+        android:text="yy"/>
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guidLineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/actors"
+        android:text="yy"/>
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guidLineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/actors"
+        android:text="yy"/>
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guidLineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/actors"
+        android:text="yy"/>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="button1,button2,button3,button4,button5"
+        app:flow_wrapMode="chain2"
+        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintEnd_toEndOf="@id/guidLineRight"
+        app:layout_constraintStart_toStartOf="@id/guidLineLeft"
+        app:layout_constraintTop_toBottomOf="@id/actors"
+        android:paddingBottom="16dp"/>
+
+    <Button
+        android:id="@+id/like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guidLineLeft"
+        app:layout_constraintTop_toBottomOf="@id/flow"
+        app:layout_constraintEnd_toStartOf="@id/watch"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_goneMarginEnd="0dp"
+        app:layout_goneMarginStart="0dp"
+        android:text="LIKE"
+        android:backgroundTint="@color/black"/>
+    <Button
+        android:id="@+id/watch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_goneMarginEnd="0dp"
+        app:layout_goneMarginStart="0dp"
+        app:layout_constraintStart_toEndOf="@id/like"
+        app:layout_constraintTop_toBottomOf="@id/flow"
+        app:layout_constraintEnd_toStartOf="@id/share"
+        android:text="watch"
+        android:backgroundTint="@color/black"/>
+    <Button
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        app:layout_goneMarginEnd="0dp"
+        app:layout_goneMarginStart="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/watch"
+        app:layout_constraintTop_toBottomOf="@id/flow"
+        app:layout_constraintEnd_toEndOf="@id/guidLineRight"
+        android:text="share"
+        android:backgroundTint="@color/black"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
